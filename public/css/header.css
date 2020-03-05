@@ -1,0 +1,35 @@
+.navbar-brand img{
+    transform: rotateY(180deg);
+    /*#1644ad*/
+}
+.bg-maincolor{
+    background-color: rgba(17, 117, 226, 0.91);
+}
+.nav-scroll{
+visibility: hidden;
+}
+
+.search-btn{
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+}
+.search-btn:hover{
+    background-color: #5884ea;
+}
+.btn-effect-hover{
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+}
+.btn-effect-hover:hover{
+    background-color: white;
+    color: #1175E2;
+    transition: all .2s ease-in-out;
+}
+.nav-item{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

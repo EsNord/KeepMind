@@ -1,0 +1,28 @@
+.Content-Video{
+    color: white;
+}
+
+@media (min-width: 992px){
+    .video{
+        background: url('../img/wave.svg') no-repeat;
+        width: 100%;
+        height: 600px;
+        padding: 40px 0;
+    }
+    .video .Content-Video{
+        transform: translate(0,30%);
+    }
+    .Video-Box{
+
+    }
+}
+
+.Content-Video p{
+    line-height: 1.8;
+}
+@media (max-width: 992px){
+    .video{
+        background-color: #184ab3;
+        margin-top:40%;
+    }
+}

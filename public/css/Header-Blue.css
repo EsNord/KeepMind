@@ -1,0 +1,125 @@
+.header-blue {
+  padding-bottom: 80px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.modal i{
+  color: #1f40d2;
+}
+.main-nav{
+  transition: background 1s ease-in-out;
+}
+.header-blue .navbar {
+  background: transparent;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+@media (min-width:768px) {
+  .header-blue .navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.header-blue .navbar .navbar-brand {
+  font-weight: bold;
+  color: inherit;
+}
+
+.header-blue .navbar .navbar-toggler {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.header-blue .navbar .navbar-toggler:hover, .header-blue .navbar-toggler:focus {
+  background: none;
+}
+
+.header-blue .hero h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  margin-top: 100px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+@media (min-width:992px) {
+  .header-blue .hero h1 {
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+}
+
+.header-blue .hero p {
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+
+.btn-effect-hover:hover {
+  background-color: white;
+  color: #1175E2;
+  transition: all .2s ease-in-out;
+}
+
+.btn-effect-hover {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.nav-item .search-btn {
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-item .search-btn:hover {
+  background-color: #5884ea;
+}
+
+.reverse-effect-color {
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+}
+
+.reverse-effect-color:hover {
+  color: #1175E2;
+}
+
+.left-content-header .btn {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 890px) {
+  .hero {
+    text-align: center;
+  }
+}
+
+.Header {
+  background: url("../img/home-bg-top.svg") no-repeat;
+  background-size: 3000px auto;
+  background-position: bottom;
+  min-height: 700px;
+}
+.left-content-header{
+  margin-top: 100px;
+}
+.right-header-content{
+  margin-top: 100px;
+}
