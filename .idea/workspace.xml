@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30f0bb15-780c-4da5-b9f4-4636ebc9f1f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_28_225525_create_img_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_28_225525_create_img_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="30f0bb15-780c-4da5-b9f4-4636ebc9f1f1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -446,12 +442,12 @@
       <workItem from="1583420085261" duration="369000" />
       <workItem from="1583423674982" duration="1505000" />
       <workItem from="1583500102385" duration="1147000" />
-      <workItem from="1583505291265" duration="1465000" />
+      <workItem from="1583505291265" duration="2151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171608000" />
+    <option name="totallyTimeSpent" value="172294000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
