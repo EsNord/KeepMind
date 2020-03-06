@@ -472,8 +472,6 @@
                 else{
                     alert("email is used")
                 }
-            }).catch(function (e) {
-                console.log(e)
             })
         })
 

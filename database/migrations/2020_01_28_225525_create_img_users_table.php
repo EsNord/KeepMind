@@ -15,6 +15,7 @@ class CreateImgUsersTable extends Migration
     {
         Schema::create('img_users', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('idUser');
             $table->string('nameImg');
 
             $table->timestamps();
