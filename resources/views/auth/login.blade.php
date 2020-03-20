@@ -135,10 +135,16 @@
                 console.log(res)
                 if(res.data.status){
                     localStorage.setItem('token', res.data.token)
-                    window.location.href = '/Dashboard'
+                    if (res.data.role == 1){
+                        window.location.href = '/Dashboard'
+                    }else{
+                        if (res.data.role == 0) {
+                            window.location.href = '/Admin'
+                        }
+                    }
 
                 }else{
-                    alert(res.data.status)
+                    alert("email or password is false")
                 }
 
             }).catch(e => console.log(e))

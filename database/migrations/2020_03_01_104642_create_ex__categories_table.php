@@ -15,8 +15,8 @@ class CreateExCategoriesTable extends Migration
     {
         Schema::create('ex__categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('exercise_id');
-            $table->string('category');
+            $table->integer('idExc');
+            $table->integer('idCategory');
             $table->timestamps();
         });
     }

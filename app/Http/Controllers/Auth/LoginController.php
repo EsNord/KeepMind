@@ -17,6 +17,7 @@ class LoginController extends Controller
     public function login(){
         $res = ['token' => null,
             'status' => false,
+            'role' => -1
         ];
 
         $credentials = ['email' => request('email'),
@@ -25,6 +26,7 @@ class LoginController extends Controller
 
         if (auth()->attempt($credentials)){
             $user = auth()->user();
+            $res['role'] = $user->role;
             $res['token'] = $user->createToken('app')->accessToken;
             $res['status'] = true;
         }

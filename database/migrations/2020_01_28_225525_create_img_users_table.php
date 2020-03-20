@@ -17,7 +17,6 @@ class CreateImgUsersTable extends Migration
             $table->bigIncrements('id');
             $table->integer('idUser');
             $table->string('nameImg');
-
             $table->timestamps();
         });
     }

@@ -136,7 +136,7 @@
                     <i class="fa fa-cog"></i>
                     <span class="badge-sonar"></span>
                 </a>
-                <a href="/">
+                <a href="/" id="logOut" >
                     <i class="fa fa-power-off"></i>
                 </a>
             </div>
@@ -194,7 +194,9 @@
     <script src="js/axios.min.js"></script>
 
     <script>
-
+        $('#logOut').click(function (res) {
+            localStorage.removeItem("token");
+        })
         console.log(8965132)
         axios
             .post("api/Dashboard",{},{

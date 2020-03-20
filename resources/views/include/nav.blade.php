@@ -130,6 +130,26 @@
 <script src="/js/bs-animation.js"></script>
 <script src="/js/script.js"></script>
 <script>
+    if (localStorage.getItem('token') != null){
+        axios
+            .post("/api/Profile",{},{
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem("token")}`
+                    }
+                }
+            )
+            .then(function(res){
+                if (res.data.user.role == 1){
+                    window.location.href = '/Dashboard'
+                }else {
+                    if (res.data.user.role == 0){
+                        window.location.href = '/Admin'
+                    }
+                }
+            })
+            .catch(err => console.log(err))
+
+    }
     $("#Login").submit(function (e) {
         e.preventDefault()
         var email = $('#email').val()
@@ -144,13 +164,21 @@
                 console.log(res.data.token)
                 localStorage.setItem('token', res.data.token)
                 console.log(res.data.token)
-                window.location.href = '/Dashboard'
+                if (res.data.role == 1){
+                    window.location.href = '/Dashboard'
+                }else{
+                    if (res.data.role == 0) {
+                        window.location.href = '/Admin'
+                    }
+                }
 
             }else{
-                alert(res.data.status)
+                alert("email or password is false")
             }
 
         }).catch(e => console.log(e))
 
     })
+
+
 </script>

@@ -10,7 +10,9 @@ class User extends Authenticatable
 {
     use HasApiTokens, Notifiable;
     protected $attributes = [
-      'image' => 'default.png',
+        'image' => 'default.png',
+        'seen' => false,
+        'rank' => 0,
     ];
     /**
      * The attributes that are mass assignable.
@@ -22,6 +24,7 @@ class User extends Authenticatable
         'last_name', 'user_name', 'location',
         'birth_date', 'about', 'facebook','linkedin'
     ];
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -40,4 +43,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function img(){
+        return $this->hasone('App\ImgUser','idUser','id' );
+    }
+    function newM(){
+        return $this->hasone('App\LastMember','idUser','id' );
+    }
 }

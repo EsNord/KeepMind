@@ -16,13 +16,15 @@ class CreateExercisesTable extends Migration
         Schema::create('exercises', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('level');
+            $table->boolean('seen');
             $table->mediumText('description');
             $table->string('title');
             $table->integer('countSolved');
             $table->integer('ageClass');
             $table->integer('orderInTrack');
             $table->integer('achiveRank');
-
+            $table->string('input');
+            $table->string('output');
             $table->timestamps();
         });
     }

@@ -34,3 +34,26 @@ Route::get('Profile/edit', function () {
 
 Route::get('/Login/{provider}','Auth\LoginController@redirectToProvider');
 Route::get('/Login/{provider}/Callback','Auth\LoginController@handleProviderCallback');
+
+Route::get('/Admin', function () {
+    return view('AdminCp.Cp');
+})->name('MainCp');
+//AdminCp
+Route::get('/Admin/Exercise/Add', function () {
+    return view('AdminCp.pages.AddEx');
+})->name('AddEX');
+
+Route::get('/Admin/Exercise/Category', function () {
+    return view('AdminCp.pages.Category');
+})->name('Category');
+
+Route::get('/Admin/Exercise/ManageEx', function () {
+    return view('AdminCp.pages.ManageEx');
+})->name('MangeEx');
+Route::get('/Admin/Exercise', function () {
+    return view('AdminCp.pages.ShowEx');
+})->name('ShowEx');
+
+Route::get('/Admin/ManageUser', function () {
+    return view('AdminCp.pages.ManageUser');
+})->name('ManageUser');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\LastMember;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use App\ImgUser;
@@ -24,6 +25,7 @@ class RegisterController extends Controller
             $user->email = request('email');
             $user->first_name = request('firstName');
             $user->last_name = request('lastName');
+            $user->role = "1";
             if (request('birth_date') != null){
             $user->birth_date = request('birth_date');
             }else{
@@ -33,23 +35,26 @@ class RegisterController extends Controller
             $res['status'] = true;
             $user->save();
             $res['token'] = $user->createToken('app')->accessToken;
-            $user->save();
-            $img = new ImgUser();
+           $img = new ImgUser();
             if (request('image') != 0) {
                 $ext = explode('.', request('image'));
                 $ext = $ext[count($ext) - 1];
                 $now = time() . '.' . $ext;
-                $img ->nameImg = $now;
+                $img->nameImg =  $now;
+                $img->idUser = $user->id;
+                $img->save();
                 $res['status'] = true;
                 move_uploaded_file(request('image'), './img/' . $now);
-
-                $img->idUser = $user->id;
-                $img->save();
             }else{
-                $img->nameImg = 'default.png';
                 $img->idUser = $user->id;
+                $img ->nameImg = 'default.png';
                 $img->save();
             }
+            $lastmember = new LastMember();
+            $lastmember->idUser = $user->id;
+            $lastmember->save();
+            $user->save();
+
         }
         return $res;
     }
